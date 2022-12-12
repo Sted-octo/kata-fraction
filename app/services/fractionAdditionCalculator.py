@@ -3,13 +3,13 @@ from app.services.fractionNeutralTester import FractionNeutralTester
 from app.services.fractionNaturalTester import FractionNaturalTester
 
 class FractionAdditionCalculator:
-  def Add(fractionBase:Fraction, fractionToAdd:Fraction) -> Fraction:
-    if FractionNeutralTester.IsNeutral(fractionToAdd):
-      return fractionBase
-    if FractionNeutralTester.IsNeutral(fractionBase):
-      return fractionToAdd
+  def Add(base:Fraction, toAdd:Fraction) -> Fraction:
+    if FractionNeutralTester.IsNeutral(toAdd):
+      return base
+    if FractionNeutralTester.IsNeutral(base):
+      return toAdd
 
-    if FractionNaturalTester.IsNatural(fractionBase) and FractionNaturalTester.IsNatural(fractionToAdd):
-      return Fraction(fractionBase.numerator + fractionToAdd.numerator)
+    if FractionNaturalTester.IsNatural(base) and FractionNaturalTester.IsNatural(toAdd):
+      return Fraction(base.numerator + toAdd.numerator)
 
     return Fraction()

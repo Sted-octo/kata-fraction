@@ -37,3 +37,19 @@ def test_identical_denominators_should_return_numerators_sum_and_same_denominato
 
   assert sum.numerator == 8
   assert sum.denominator == denominator
+
+def test_different_denominators_should_return_denominators_multiplication():
+  base = Fraction(3,5)
+  toAdd = Fraction(7,4)
+
+  sum:Fraction = FractionAdditionCalculator.Add(base, toAdd)
+
+  assert sum.denominator == 20
+
+def test_different_denominators_should_return_ponderate_numerators_addition():
+  base = Fraction(3,5)
+  toAdd = Fraction(7,4)
+
+  sum:Fraction = FractionAdditionCalculator.Add(base, toAdd)
+
+  assert sum.numerator == (3*4+7*5)

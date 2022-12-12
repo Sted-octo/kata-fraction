@@ -15,4 +15,4 @@ class FractionAdditionCalculator:
     if base.denominator == toAdd.denominator:
       return Fraction(base.numerator + toAdd.numerator, base.denominator)
 
-    return Fraction()
+    return Fraction(base.numerator * toAdd.denominator + toAdd.numerator * base.denominator, base.denominator * toAdd.denominator)

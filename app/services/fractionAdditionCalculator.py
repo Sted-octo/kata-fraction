@@ -1,9 +1,10 @@
 from app.domain.fraction import Fraction
+from app.services.fractionNeutralTester import FractionNeutralTester
 
 class FractionAdditionCalculator:
   def Add(fractionBase:Fraction, fractionToAdd:Fraction) -> Fraction:
-    if fractionToAdd.numerator == 0 and fractionToAdd.denominator == 1:
+    if FractionNeutralTester.IsNeutral(fractionToAdd):
       return fractionBase
-    if fractionBase.numerator == 0 and fractionBase.denominator == 1:
+    if FractionNeutralTester.IsNeutral(fractionBase):
       return fractionToAdd
     return Fraction()

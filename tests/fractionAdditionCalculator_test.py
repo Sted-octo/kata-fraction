@@ -27,3 +27,13 @@ def test_two_natural_fractions_should_return_natural_fraction_with_sum_of_numera
 
   assert sum.numerator == 7
   assert sum.denominator == 1
+
+def test_identical_denominators_should_return_numerators_sum_and_same_denominator():
+  denominator = 7
+  base = Fraction(5,denominator)
+  toAdd = Fraction(3,denominator)
+
+  sum:Fraction = FractionAdditionCalculator.Add(base, toAdd)
+
+  assert sum.numerator == 8
+  assert sum.denominator == denominator

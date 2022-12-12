@@ -12,4 +12,7 @@ class FractionAdditionCalculator:
     if FractionNaturalTester.IsNatural(base) and FractionNaturalTester.IsNatural(toAdd):
       return Fraction(base.numerator + toAdd.numerator)
 
+    if base.denominator == toAdd.denominator:
+      return Fraction(base.numerator + toAdd.numerator, base.denominator)
+
     return Fraction()

@@ -18,3 +18,12 @@ def test_add_any_fraction_to_neutral_fraction_should_return_to_add_fraction():
 
   assert sum.numerator == anyFraction.numerator
   assert sum.denominator == anyFraction.denominator
+
+def test_two_natural_fractions_should_return_natural_fraction_with_sum_of_numerators():
+  base = Fraction(5)
+  anyFraction = Fraction(2)
+
+  sum:Fraction = FractionAdditionCalculator.Add(base, anyFraction)
+
+  assert sum.numerator == 7
+  assert sum.denominator == 1

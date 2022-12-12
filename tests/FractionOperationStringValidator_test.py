@@ -1,5 +1,5 @@
 
-from app.services.FractionOperationStringValidator import FractionOperationStringValidator
+from app.services.fractionOperationStringValidator import FractionOperationStringValidator
 
 def test_EmptyStringOperation_ShouldReturn_False():
   input:str = ""

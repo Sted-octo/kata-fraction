@@ -20,5 +20,5 @@ def test_Fraction_Without_arguments_should_init_numerator_to_0_and_denominator_e
   assert noArgs.denominator == 1
 
 def test_Fraction_Without_numerator_2_should_init_numerator_equal_to_2():
-  withDenominator:Fraction = Fraction(2)
-  assert withDenominator.numerator == 2
+  onlyNumerator:Fraction = Fraction(2)
+  assert onlyNumerator.numerator == 2

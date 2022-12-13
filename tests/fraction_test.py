@@ -22,3 +22,13 @@ def test_fraction_without_arguments_should_init_numerator_to_0_and_denominator_e
 def test_fraction_numerator_2_should_init_numerator_equal_to_2():
   onlyNumerator:Fraction = Fraction(2)
   assert onlyNumerator.numerator == 2
+
+def test_change_numerator_after_create_object_should_not_be_possible():
+  fraction = Fraction(4,3)
+  with pytest.raises(AttributeError):
+    fraction.numerator = 5
+
+def test_change_denominator_after_create_object_should_not_be_possible():
+  fraction = Fraction(4,3)
+  with pytest.raises(AttributeError):
+    fraction.denominator = 5
